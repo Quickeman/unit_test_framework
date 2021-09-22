@@ -35,7 +35,7 @@ void check(bool test_cond, std::string fail_msg = _defaultTestFailMessage) {
 
 template <typename T>
 void check(T a, T b, T delta = (T)1e-6, std::string fail_msg = _defaultTestFailMessage) {
-    fail_msg.append("Expected " + std::to_string(b) + ", got " + std::to_string(a));
+    fail_msg.append(" Expected " + std::to_string(b) + ", got " + std::to_string(a));
     check(abs(a - b) <= delta, fail_msg);
 }
 
